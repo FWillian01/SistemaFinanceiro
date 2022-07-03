@@ -11,11 +11,8 @@ $query = $pdo -> query("SELECT * FROM usuarios WHERE nivel = 'Administrador'");
 $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = count($resultado);
 
-if($total_reg > 0) {
-    echo 'Já contém usuario adm, quantidade:'. $total_reg;
-}
+if($total_reg == 0) {
 
-else {
     $pdo -> query("INSERT INTO usuarios SET nome = 'teste', email = '$email_sistema', cpf = '000.000.000-00', senha = '$senha', senha_crip = '$senha_crip',  nivel = 'Administrador', data = CurDate() ");
 }
 
