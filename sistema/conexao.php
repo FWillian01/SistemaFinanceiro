@@ -17,7 +17,10 @@ try {
     echo 'Erro ao se conectar ao Banco de Dados' .$e;
 }
 
-echo ('teste')
 
+// Variaveis do Sistema
+
+$nome_sistema = 'Sistema Financeiro';
+$email_sistema = 'contato@gmail.com.br';
 
 ?>
