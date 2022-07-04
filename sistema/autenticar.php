@@ -1,5 +1,5 @@
 <?php
-    @session_start();
+@session_start();
     require_once("conexao.php");
 
 
@@ -12,12 +12,13 @@
     if($total_reg > 0) {
         $ativo = $resultado[0]['ativo'];
 
-        if($ativo == 'Sim'){
-            $_SESSION['id'] = $res[0]['id'];
-            $_SESSION['nivel'] = $res[0]['nivel'];
-            $_SESSION['nome'] = $res[0]['nome'];
-            // Ir para o painel
+        if(@$ativo == 'Sim'){
 
+            $_SESSION['id'] = $resultado[0]['id'];
+            $_SESSION['nivel'] = $resultado[0]['nivel'];
+            $_SESSION['nome'] = $resultado[0]['nome'];
+
+            // Ir para o painel 
         echo "<script>window.location='painel'</script>";
         }else {
             echo "<script>window.alert('Seu usuario foi desativado, contate o administrador!')</script>";
