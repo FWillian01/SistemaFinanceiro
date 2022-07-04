@@ -1,6 +1,9 @@
 <?php
+@session_start();
 
-// echo "<script>window.location='../index.php'</script>";
+if(@$_SESSION['id'] == ''){
+// echo "<script>window.location='index.php'</script>";
+}
 
 
 

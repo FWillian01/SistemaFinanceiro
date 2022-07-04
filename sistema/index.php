@@ -9,11 +9,11 @@ $senha_crip = md5($senha);
 
 $query = $pdo -> query("SELECT * FROM usuarios WHERE nivel = 'Administrador'");
 $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
-$total_reg = count($resultado);
+$total_reg = @count($resultado);
 
 if($total_reg == 0) {
 
-    $pdo -> query("INSERT INTO usuarios SET nome = 'teste', email = '$email_sistema', cpf = '000.000.000-00', senha = '$senha', senha_crip = '$senha_crip',  nivel = 'Administrador', data = CurDate() ");
+    $pdo -> query("INSERT INTO usuarios SET nome = 'teste', email = '$email_sistema', cpf = '000.000.000-00', senha = '$senha', senha_crip = '$senha_crip',  nivel = 'Administrador', data = CurDate(), ativo = 'Sim'");
 }
 
 
