@@ -45,7 +45,6 @@ if($total_reg == 0) {
                     <div class="icon-bg">
                         <p class="icon-senha"></p>
                     </div>
-
                 </div>
                 <input class="btn" type="submit" value="LOGIN" s>
             </div>

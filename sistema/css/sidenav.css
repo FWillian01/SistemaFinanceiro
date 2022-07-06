@@ -1,0 +1,47 @@
+.sidenav {
+    grid-area: sidenav;
+    height: 100vh;
+    width: 240px;
+    background-color: #fed6ff;
+    box-shadow: rgb(62, 61, 61) 1px 1px 7px;
+}
+
+.logo-sidenav {
+    background-image: url(../img/melflash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px auto 20px auto;
+    width: 150px;
+    display: block;
+    height: 150px;
+    border-bottom: 2px solid #b8deb7;
+}
+
+.sidenav ul li {
+    height: 50px;
+    padding-left: 15px;
+    background-color: #fed6ff;
+    color: #fff;
+    transition: 0.5s;  
+}
+
+.sidenav ul li:hover {
+    height: 50px;
+    background: #b8deb7;
+    transition: 0.5s;
+    color: #fff;
+    
+}
+
+.sidenav ul li a span {
+    color: #000;
+    font-weight: bold;
+}
+
+.sidenav ul li a i img {
+
+}
+
+.sidenav ul li a:hover {
+    background: rgba;
+}
