@@ -1,9 +1,17 @@
 .sidenav {
     grid-area: sidenav;
     height: 100vh;
-    width: 240px;
+    width: 50px;
     background-color: #fed6ff;
-    box-shadow: rgb(62, 61, 61) 1px 1px 7px;
+    box-shadow: rgba(62, 61, 61, 0.515) 1px 1px 7px;
+    position: relative;
+    border-left: 10px solid #fed6ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: block;
+}
+.sidenav:hover {
+    width: 230px;
 }
 
 .logo-sidenav {
@@ -17,31 +25,84 @@
     border-bottom: 2px solid #b8deb7;
 }
 
+.sidevnav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
 .sidenav ul li {
-    height: 50px;
-    padding-left: 15px;
-    background-color: #fed6ff;
-    color: #fff;
-    transition: 0.5s;  
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow-x: hidden;
+
 }
 
-.sidenav ul li:hover {
-    height: 50px;
-    background: #b8deb7;
-    transition: 0.5s;
-    color: #fff;
-    
-}
-
-.sidenav ul li a span {
+.sidenav ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
     color: #000;
-    font-weight: bold;
 }
 
-.sidenav ul li a i img {
-
+.sidenav ul li a .icon-sidenav {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
 }
 
-.sidenav ul li a:hover {
-    background: rgba;
+.sidenav ul li a .icon-sidenav ion-icon {
+    position: relative;
+    font-size: 1.5s;
+    z-index: 400;
 }
+
+.sidenav ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.sidenav ul li.active {
+    background: #099c22;
+}
+
+.sidenav ul li.active a::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #099c22;
+}
+
+.sidenav ul li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #099c22;
+}
+
+
+
+
+

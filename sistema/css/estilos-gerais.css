@@ -1,0 +1,33 @@
+/* Estilos Gerais */
+
+body, p, h1, ul, li {
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+}
+
+body {
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estrutura */
+
+.estrutura {
+    display: grid;
+    grid-template-columns: 1fr 26fr 1fr;
+    grid-template-areas: 
+    "sidenav header header"
+    "sidenav content anuncios"
+    "footer footer footer"
+    ;
+}
+
+

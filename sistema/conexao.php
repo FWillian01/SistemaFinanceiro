@@ -3,7 +3,7 @@
 
 // Dados do servidor
 $servidor = '127.0.0.1:3307';
-$banco = 'melflash_sql';
+$banco = 'melflash';
 $usuario = 'root';
 $senha = '';
 
