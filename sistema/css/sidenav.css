@@ -1,17 +1,13 @@
 .sidenav {
     grid-area: sidenav;
     height: 100vh;
-    width: 50px;
-    background-color: #fed6ff;
+    background-color: #2c2c2c;
     box-shadow: rgba(62, 61, 61, 0.515) 1px 1px 7px;
     position: relative;
-    border-left: 10px solid #fed6ff;
+    border-left: 10px solid #2c2c2c;
     overflow-x: hidden;
     transition: 0.5s;
     display: block;
-}
-.sidenav:hover {
-    width: 230px;
 }
 
 .logo-sidenav {
@@ -47,7 +43,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    color: #000;
+    color: #fff;
 }
 
 .sidenav ul li a .icon-sidenav {
@@ -75,7 +71,7 @@
 }
 
 .sidenav ul li.active {
-    background: #099c22;
+    background: #000;
 }
 
 .sidenav ul li.active a::before {
@@ -87,7 +83,7 @@
     height: 30px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 15px -15px 0 #099c22;
+    box-shadow: 15px -15px 0 #fff;
 }
 
 .sidenav ul li.active a::after {
@@ -99,7 +95,7 @@
     height: 30px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 15px -15px 0 #099c22;
+    box-shadow: 15px -15px 0 #000;
 }
 
 

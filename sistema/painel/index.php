@@ -1,8 +1,27 @@
-<!-- <?php
-require_once('verificar.php');
+<?php
+@session_start();
 require_once('../conexao.php');
+require_once('verificar.php');
 
-?> -->
+
+$id_usuario = $_SESSION['id'];
+
+$query = $pdo -> query("SELECT * FROM usuarios WHERE id = '$id_usuario'");
+$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+$total_reg = @count($resultado);
+
+if($total_reg > 0) {
+$nome_usuario = $resultado[0]['nome'];
+$email_usuario = $resultado[0]['email'];
+$cpf_usuario = $resultado[0]['cpf'];
+$nivel_usuario = $resultado[0]['nivel'];
+$telefone_usuario = $resultado[0]['telefone'];
+$foto = $resultado[0]['foto'];
+
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -21,7 +40,7 @@ require_once('../conexao.php');
 
 
 
-    <title><?php echo "$nome_sistema" ?></title>
+    <title><?php echo "$nome_usuario" ?></title>
 </head>
 <body>
     <div class="estrutura">
@@ -30,8 +49,8 @@ require_once('../conexao.php');
             <nav id="nav" class="nav">
                 <img src="../img/semfoto.jpg" alt="">
                 <div>
-                    <h1>Fábio Wilian</h1>
-                    <p>Administrador</p>
+                    <h1><?php echo "$nome_usuario" ?></h1>
+                    <p><?php echo "$nivel_usuario" ?></p>
                 </div>
                
                 <button class="conf" data-menu="button" aria-expanded="false" arial-controls="menu"></button>
@@ -51,7 +70,7 @@ require_once('../conexao.php');
                     <li>
                         <a href="#">
                             <span class="icon-nav"><ion-icon name="log-out-outline"></ion-icon></span>
-                            <span class="title">Logout</span>
+                            <span class="title"><a href="logout.php">Logout</a></span>
                         </a>
                     </li>
                 </ul>
@@ -61,10 +80,41 @@ require_once('../conexao.php');
         <div id="modal-conf" class="modal-container">
             <div class="modal">
                 <button class="fechar">x</button>
-                <h3 class="subititulo">Cadastre-se</h3>
-                <form action="">
-                    <input type="text" class="input-conf" placeholder="Email">
-                    <input type="button" class="btn" value="Cadastrar">
+                
+                <form class="form-modal" method="post" id="">
+                    <p>Editar Perfil</p>
+
+                    <div class="form-space">
+                        <label for="">Nome</label>
+                        <input type="text" class="input-conf" placeholder="Nome">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">E-mail</label>
+                        <input type="text" class="input-conf" placeholder="Email">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">Telefone</label>
+                        <input type="text" class="input-conf" placeholder="Email">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">CPF</label>
+                        <input type="text" class="input-conf" placeholder="Email">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">Senha</label>
+                        <input type="text" class="input-conf" placeholder="Email">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">Cofirmar Senha</label>
+                        <input type="text" class="input-conf" placeholder="Email">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     
                 </form>
             </div>
         </div>
@@ -135,4 +185,9 @@ require_once('../conexao.php');
 
 <script src="../js/conf.js"></script>
 <script src="../js/modal.js"></script>
+<!-- Mascaras JS -->
+<script type="text/javascript" src="../../assets/js/mascaras.js"></script>
+
+<!-- Ajax para funcionar Mascaras JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script> 
 

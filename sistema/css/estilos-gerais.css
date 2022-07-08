@@ -22,7 +22,7 @@ a {
 
 .estrutura {
     display: grid;
-    grid-template-columns: 1fr 26fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas: 
     "sidenav header header"
     "sidenav content anuncios"

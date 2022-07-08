@@ -14,7 +14,7 @@ $total_reg = @count($resultado);
 
 if($total_reg == 0) {
 
-    $pdo -> query("INSERT INTO usuarios SET nome = 'teste', email = '$email_sistema', cpf = '000.000.000-00', senha = '$senha', senha_crip = '$senha_crip',  nivel = 'Administrador', data = CurDate(), ativo = 'Sim'");
+    $pdo -> query("INSERT INTO usuarios SET nome = 'teste', email = '$email_sistema', cpf = '000.000.000-00', senha = '$senha', senha_crip = '$senha_crip',  nivel = 'Administrador', data = CurDate(), ativo = 'Sim', foto = 'sem-foto.jpg'");
 }
 
 
