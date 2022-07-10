@@ -1,0 +1,81 @@
+.content {
+    grid-area: content;
+    margin: 5px auto 40px auto;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.box {
+    background-color: #fff;
+    width: 200px;
+    height: 100px;
+    margin: 20px 0 20px 20px;
+    flex: 2 1 130px;
+    flex-wrap: wrap;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.box:nth-child(5) {
+    margin-right: 20px;
+}
+
+ .icon-main {
+    background-color: #fc4b6c;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 10px 0 10px;
+ }   
+
+ .color-1 {
+    background-color: #7460ee;
+ }
+ 
+ .color-2 {
+    background-color: #cb2301;
+ }  
+
+ .color-3 {
+    background-color: #ffb22b;
+ }
+
+ .color-4 {
+    background-color: #00ad45;
+ }
+
+.icon-main ion-icon{
+    width: 30px;
+    height: 30px;
+    margin: 13px 3px auto;
+    color: #fff;
+}
+
+
+.box h1 {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.box p {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+
+   
+}
+
+#myChart {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+}

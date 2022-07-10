@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 @session_start();
 require_once('../conexao.php');
 require_once('verificar.php');
@@ -21,7 +21,7 @@ $foto = $resultado[0]['foto'];
 }
 
 
-?>
+?> -->
 
 
 <!DOCTYPE html>
@@ -36,6 +36,8 @@ $foto = $resultado[0]['foto'];
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/estilos-gerais.css">
     <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 
@@ -58,15 +60,15 @@ $foto = $resultado[0]['foto'];
                     <li >
                         <a href="#">
                             <span class="icon-nav"><ion-icon name="construct-outline"></ion-icon></span>
-                            <span class="title">Configurações</span>
+                            <span class="modalConf">Configurações</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <span class="icon-nav"><ion-icon name="create-outline"></ion-icon></span>
-                            <span class=""></span>Editar Perfil</span>
+                            <span class="modalEditar">Editar Perfil</span>
                         </a>
-                    </li>
+                    </li>   
                     <li>
                         <a href="#">
                             <span class="icon-nav"><ion-icon name="log-out-outline"></ion-icon></span>
@@ -96,22 +98,64 @@ $foto = $resultado[0]['foto'];
                      </div>
                      <div class="form-space">
                         <label for="">Telefone</label>
-                        <input type="text" class="input-conf" placeholder="Email">
+                        <input type="text" class="input-conf" placeholder="119000000">
                         <!-- <input type="button" class="btn" value="Cadastrar"> -->
                      </div>
                      <div class="form-space">
                         <label for="">CPF</label>
-                        <input type="text" class="input-conf" placeholder="Email">
+                        <input type="text" class="input-conf" placeholder="000.000.000-00">
                         <!-- <input type="button" class="btn" value="Cadastrar"> -->
                      </div>
                      <div class="form-space">
                         <label for="">Senha</label>
-                        <input type="text" class="input-conf" placeholder="Email">
+                        <input type="text" class="input-conf" placeholder="***********">
                         <!-- <input type="button" class="btn" value="Cadastrar"> -->
                      </div>
                      <div class="form-space">
                         <label for="">Cofirmar Senha</label>
+                        <input type="text" class="input-conf" placeholder="***********">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-editar" class="modal-container">
+            <div class="modal">
+                <button class="fechar">x</button>
+                
+                <form class="form-modal" method="post" id="">
+                    <p>Editar Perfil</p>
+
+                    <div class="form-space">
+                        <label for="">Nome</label>
+                        <input type="text" class="input-conf" placeholder="Nome">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">E-mail</label>
                         <input type="text" class="input-conf" placeholder="Email">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">Telefone</label>
+                        <input type="text" class="input-conf" placeholder="119000000">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">CPF</label>
+                        <input type="text" class="input-conf" placeholder="000.000.000-00">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">Senha</label>
+                        <input type="text" class="input-conf" placeholder="***********">
+                        <!-- <input type="button" class="btn" value="Cadastrar"> -->
+                     </div>
+                     <div class="form-space">
+                        <label for="">Cofirmar Senha</label>
+                        <input type="text" class="input-conf" placeholder="***********">
                         <!-- <input type="button" class="btn" value="Cadastrar"> -->
                      </div>
                      
@@ -150,32 +194,47 @@ $foto = $resultado[0]['foto'];
         </nav>
 
         <main class="content">
-            <div class="titulo">
-                <h1>loren</h1>
-                <span>loren</span>
-            </div>
-
-            <div class="caracteristicas">
-                <div>
-                    <span class="numero">1</span>
-                    <span class="rotulo">11</span>
+                <div class="box">
+                    <div class="icon-main">
+                        <span><ion-icon name="person-add"></ion-icon></span>
+                    </div>
+                    <h1>32</h1>
+                    <p>Total de Clientes</p>
+                </div>
+                <div class="box">
+                    <div class="icon-main color-1">
+                        <span><ion-icon name="cash"></ion-icon></span>
+                    </div>
+                    <h1>32</h1>
+                    <p>Contas à Pagar Hoje</p>
                 </div>
 
-                <div>
-                    <span class="numero">11</span>
-                    <span class="rotulo">11</span>
+                <div class="box">
+                    <div class="icon-main color-2">
+                        <span><ion-icon name="receipt"></ion-icon></span>
+                    </div>
+                    <h1>32</h1>
+                    <p>Contas à Receber Hoje</p>
                 </div>
-            </div>
 
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nisi placeat sit, saepe cumque facilis itaque esse qui asperiores assumenda quo explicabo sequi similique, mollitia fugiat officia dolores vitae quam.
-            </p>
+                <div class="box">
+                    <div class="icon-main color-3">
+                        <span><ion-icon name="pie-chart"></ion-icon></span>
+                    </div>
+                    <h1>32</h1>
+                    <p>Produtos Estoque</p>
+                </div>
 
-            <img src="../img/icone-email.png" alt="">
+                <div class="box">
+                    <div class="icon-main color-4">
+                        <span><ion-icon name="logo-usd"></ion-icon></span>
+                    </div>
+                    <h1>32</h1>
+                    <p>R$: Saldo do Dia</p>
+                </div>
 
-            <p></p>
-
-
+                <canvas id="myChart"></canvas>
+  
         </main>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -185,6 +244,8 @@ $foto = $resultado[0]['foto'];
 
 <script src="../js/conf.js"></script>
 <script src="../js/modal.js"></script>
+<script src="../js/chart.js"></script>
+
 <!-- Mascaras JS -->
 <script type="text/javascript" src="../../assets/js/mascaras.js"></script>
 

@@ -57,14 +57,14 @@ a {
 .icon-email {
     width: 24px;
     height: 24px;
-    background-image: url(../img/icone-email.png);
+    background-image: url(img/icone-email.png);
     background-size: contain;    
 }
 
 .icon-senha {
     width: 24px;
     height: 24px;
-    background-image: url(../img/icone-senha.png);
+    background-image: url(img/icone-senha.png);
     background-size: contain;    
 }
 

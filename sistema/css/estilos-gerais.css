@@ -7,7 +7,7 @@ body, p, h1, ul, li {
 }
 
 body {
-
+    background-color: #f1f1f1;
 }
 
 li {
@@ -22,11 +22,11 @@ a {
 
 .estrutura {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: 80px;
     grid-template-areas: 
-    "sidenav header header"
-    "sidenav content anuncios"
-    "footer footer footer"
+    "sidenav header"
+    "sidenav content"
     ;
 }
 

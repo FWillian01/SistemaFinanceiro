@@ -9,9 +9,18 @@ function iniciaModal(modalID) {
         });
     }
 }
-
 // iniciaModal('modal-conf');
 
-const title = document.querySelector('.title');
-title.addEventListener('click', () => iniciaModal('modal-conf'));
+const modalEditar = document.querySelector('.modalEditar');
+console.log(modalEditar);
+modalEditar.addEventListener('click', function() {
+    iniciaModal('modal-editar');
+})
+
+const modalConf = document.querySelector('.modalConf');
+console.log(modalConf);
+modalConf.addEventListener('click', function() {
+    iniciaModal('modal-conf');
+})
+
 

@@ -1,13 +1,4 @@
 
-
-
-
-
-
-
-
-
-
 const list = document.querySelectorAll('.sidenav-list');
 function activeLink(){
     list.forEach((item) =>
